@@ -2,11 +2,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify/common/extensions/size_extensions.dart';
 
+enum MusicBoxType { song, singer }
+
 class MusicBox extends StatelessWidget {
   final String posterUrl;
   final String name;
+  final MusicBoxType type;
 
-  const MusicBox({this.posterUrl, this.name});
+  const MusicBox({this.posterUrl, this.name, this.type = MusicBoxType.song});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,10 +21,19 @@ class MusicBox extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          CachedNetworkImage(
-            imageUrl: posterUrl,
-            fit: BoxFit.cover,
-          ),
+          if (type == MusicBoxType.song)
+            CachedNetworkImage(
+              imageUrl: posterUrl,
+              fit: BoxFit.cover,
+            ),
+          if (type == MusicBoxType.singer)
+            ClipRRect(
+              borderRadius: BorderRadius.circular(60.0),
+              child: CachedNetworkImage(
+                imageUrl: posterUrl,
+                fit: BoxFit.cover,
+              ),
+            ),
           SizedBox(
             height: 10.h,
           ),

@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:spotify/common/extensions/size_extensions.dart';
 import 'package:spotify/common/screenutil/screenutil.dart';
 import 'package:spotify/data/dummy_data.dart';
-import 'package:spotify/presentation/journeys/home/song_flex_widget.dart';
+import 'package:spotify/presentation/journeys/home/songs_by_vibe.dart';
 import 'package:spotify/presentation/themes/app_color.dart';
+import 'package:spotify/presentation/widgets/list_title.dart';
 import 'package:spotify/presentation/widgets/music_box.dart';
+import 'package:spotify/presentation/widgets/music_box_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -49,61 +51,47 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(
                         height: 10.h,
                       ),
-                      Container(
-                        child: Text(
-                          "Tünaydın",
-                          style: Theme.of(context).textTheme.headline5,
-                        ),
+                      ListTitle(
+                        title: "Tünaydın",
+                        marginBottom: 5.h,
                       ),
-                      SizedBox(height: 5.h),
-                      Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Row(
-                            children: [
-                              for (int i = 0; i < 3; i++)
-                                SongFlexWidget(
-                                  songName: dummyData.lastSixSongs[i].name,
-                                  posterURL:
-                                      dummyData.lastSixSongs[i].posterUrl,
-                                ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              for (int i = 3; i < 6; i++)
-                                SongFlexWidget(
-                                  songName: dummyData.lastSixSongs[i].name,
-                                  posterURL:
-                                      dummyData.lastSixSongs[i].posterUrl,
-                                ),
-                            ],
-                          ),
-                        ],
+                      SongsByVibe(
+                        songs: dummyData.lastSixSongs,
                       ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 20.w),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
                       SizedBox(
                         height: 20.h,
                       ),
-                      Text(
-                        "Yakınlarda Çalınanlar",
-                        style: Theme.of(context).textTheme.headline5,
+                      ListTitle(
+                        title: "Yakınlarda Çalınanlar",
+                        marginBottom: 10.h,
                       ),
+                      MusicBoxBuilder(boxList: dummyData.lastSixSongs),
                       SizedBox(
                         height: 10.h,
                       ),
-                      Container(
-                        height: 74.h,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: dummyData.lastSixSongs.length,
-                          itemBuilder: (context, index) {
-                            return MusicBox(
-                              posterUrl:
-                                  dummyData.lastSixSongs[index].posterUrl,
-                              name: dummyData.lastSixSongs[index].name,
-                            );
-                          },
-                        ),
+                      ListTitle(
+                        title: "15 dakikalık veya daha kısa programlar",
+                        marginBottom: 5.h,
+                      ),
+                      MusicBoxBuilder(boxList: dummyData.lastSixSongs),
+                      SizedBox(
+                        height: 10.h,
+                      ),
+                      ListTitle(
+                        title: "Popüler Sanatçılar",
+                      ),
+                      MusicBoxBuilder(
+                        boxList: dummyData.lastSixSongs,
+                        type: MusicBoxType.singer,
                       ),
                     ],
                   ),
