@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify/common/extensions/size_extensions.dart';
 import 'package:spotify/common/screenutil/screenutil.dart';
@@ -6,6 +7,7 @@ import 'package:spotify/data/dummy_data.dart';
 import 'package:spotify/presentation/journeys/home/songs_by_vibe.dart';
 import 'package:spotify/presentation/themes/app_color.dart';
 import 'package:spotify/presentation/widgets/list_title.dart';
+import 'package:spotify/presentation/widgets/list_title_with_poster.dart';
 import 'package:spotify/presentation/widgets/music_box.dart';
 import 'package:spotify/presentation/widgets/music_box_builder.dart';
 
@@ -78,6 +80,16 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(
                         height: 10.h,
                       ),
+                      ListTitleWithPoster(
+                        title: "Şehinşah",
+                        subTitle: "Hayranları için",
+                        posterUrl:
+                            'https://i.scdn.co/image/dd2aa02c1ae60794ab24727f662aa23869d066cb',
+                      ),
+                      MusicBoxBuilder(boxList: dummyData.sehinsahSongs),
+                      SizedBox(
+                        height: 10.h,
+                      ),
                       ListTitle(
                         title: "15 dakikalık veya daha kısa programlar",
                         marginBottom: 5.h,
@@ -90,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                         title: "Popüler Sanatçılar",
                       ),
                       MusicBoxBuilder(
-                        boxList: dummyData.lastSixSongs,
+                        boxList: dummyData.popularSinger,
                         type: MusicBoxType.singer,
                       ),
                     ],

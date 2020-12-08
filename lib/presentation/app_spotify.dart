@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/common/screenutil/screenutil.dart';
 import 'package:spotify/presentation/journeys/home/home_screen.dart';
+import 'package:spotify/presentation/journeys/nav/nav_screen.dart';
 import 'package:spotify/presentation/themes/app_color.dart';
 import 'package:spotify/common/extensions/size_extensions.dart';
 
@@ -43,7 +44,7 @@ class SpotifyApp extends StatelessWidget {
                   ),
             ),
       ),
-      home: HomeScreen(),
+      home: NavScreen(),
     );
   }
 }
