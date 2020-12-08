@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                         title: "Yakınlarda Çalınanlar",
                         marginBottom: 10.h,
                       ),
-                      MusicBoxBuilder(boxList: dummyData.lastSixSongs),
+                      MusicBoxBuilder(boxList: dummyData.recentlyPlayed),
                       SizedBox(
                         height: 10.h,
                       ),

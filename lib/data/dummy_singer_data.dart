@@ -36,4 +36,15 @@ class DummySingerData {
     posterUrl:
         "https://i.scdn.co/image/ab67616d0000b273bc7011b343324afda1c7ee6e",
   );
+  static Singer dermotKennedy = Singer(
+    name: "Dermot Kennedy",
+    posterUrl:
+        "https://i.scdn.co/image/423aa582674f96b1def19600963940f43cb6ef1f",
+  );
+
+  static Singer billieEilish = Singer(
+    name: "Billie Eilish",
+    posterUrl:
+        "https://i.scdn.co/image/dc74e8e210274fd6107a795db2455c1e03730667",
+  );
 }

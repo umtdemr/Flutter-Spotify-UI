@@ -97,4 +97,80 @@ class DummySongData {
     totalListened: 12031520,
     releasedDate: "21 şubat 2008",
   );
+  static SongModel poverOverMe = SongModel(
+    name: "Pover Over Me",
+    posterUrl:
+        "https://i.scdn.co/image/ab67616d0000b273c9fec49c8930fb10e4756dfe",
+    singer: DummySingerData.dermotKennedy,
+    totalLength: 206,
+    totalListened: 12031520,
+    releasedDate: "21 şubat 2008",
+  );
+
+  static SongModel thereforeIAm = SongModel(
+    name: "Therefore I Am",
+    posterUrl:
+        "https://i.scdn.co/image/ab67616d00001e02fec5ef9f3133aff71c525acc",
+    singer: DummySingerData.billieEilish,
+    totalLength: 206,
+    totalListened: 12031520,
+    releasedDate: "21 şubat 2008",
+  );
+
+  static SongModel lovely = SongModel(
+    name: "lovely",
+    posterUrl:
+        "https://i.scdn.co/image/ab67616d00001e028a3f0a3ca7929dea23cd274c",
+    singer: DummySingerData.billieEilish,
+    totalLength: 206,
+    totalListened: 12031520,
+    releasedDate: "21 şubat 2008",
+  );
+
+  static SongModel badGuy = SongModel(
+    name: "Bad Guy",
+    posterUrl:
+        "https://i.scdn.co/image/ab67616d00001e0250a3147b4edd7701a876c6ce",
+    singer: DummySingerData.billieEilish,
+    totalLength: 206,
+    totalListened: 12031520,
+    releasedDate: "21 şubat 2008",
+  );
+
+  static SongModel withoutMe = SongModel(
+    name: "Without Me",
+    posterUrl:
+        "https://i.scdn.co/image/ab67616d00001e026ca5c90113b30c3c43ffb8f4",
+    singer: DummySingerData.eminem,
+    totalLength: 206,
+    totalListened: 12031520,
+    releasedDate: "21 şubat 2008",
+  );
+  static SongModel tillICollapse = SongModel(
+    name: "Till I Collapse",
+    posterUrl:
+        "https://i.scdn.co/image/ab67616d00001e026ca5c90113b30c3c43ffb8f4",
+    singer: DummySingerData.eminem,
+    totalLength: 206,
+    totalListened: 12031520,
+    releasedDate: "21 şubat 2008",
+  );
+  static SongModel godzilla = SongModel(
+    name: "Godzilla",
+    posterUrl:
+        "https://i.scdn.co/image/ab67616d00001e022f44aec83b20e40f3baef73c",
+    singer: DummySingerData.eminem,
+    totalLength: 206,
+    totalListened: 12031520,
+    releasedDate: "21 şubat 2008",
+  );
+  static SongModel theRealSlimShady = SongModel(
+    name: "The Real Slim Shady",
+    posterUrl:
+        "https://i.scdn.co/image/ab67616d00001e02dbb3dd82da45b7d7f31b1b42",
+    singer: DummySingerData.eminem,
+    totalLength: 206,
+    totalListened: 12031520,
+    releasedDate: "21 şubat 2008",
+  );
 }

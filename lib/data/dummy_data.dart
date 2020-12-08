@@ -7,10 +7,21 @@ class DummyData {
   List<SongModel> lastSixSongs = [
     DummySongData.dunyadanAtlasa,
     DummySongData.firstClass,
-    DummySongData.dunyaninSonunaDogmusum,
+    DummySongData.godzilla,
+    DummySongData.tillICollapse,
     DummySongData.imza,
+    DummySongData.dursunZaman,
+  ];
+  List<SongModel> recentlyPlayed = [
+    DummySongData.badGuy,
+    DummySongData.poverOverMe,
     DummySongData.someHow,
     DummySongData.dursunZaman,
+    DummySongData.karma,
+    DummySongData.withoutMe,
+    DummySongData.thereforeIAm,
+    DummySongData.badGuy,
+    DummySongData.firstClass,
   ];
 
   List<Singer> popularSinger = [
