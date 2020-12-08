@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/presentation/journeys/home/home_screen.dart';
 import 'package:spotify/presentation/journeys/nav/custom_tab_bar_widget.dart';
+import 'package:spotify/presentation/journeys/search/search_screen.dart';
 import 'package:spotify/presentation/themes/app_color.dart';
 
 class NavScreen extends StatefulWidget {
@@ -11,7 +12,7 @@ class NavScreen extends StatefulWidget {
 class _NavScreenState extends State<NavScreen> {
   final List<Widget> _screens = [
     HomeScreen(),
-    Scaffold(),
+    SearchScreen(),
     Scaffold(),
   ];
   final List<Map<String, dynamic>> _icons = const [
