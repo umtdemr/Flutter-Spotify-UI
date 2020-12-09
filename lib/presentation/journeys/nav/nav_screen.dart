@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/data/dummy_song_data.dart';
 import 'package:spotify/presentation/journeys/home/home_screen.dart';
+import 'package:spotify/presentation/journeys/nav/bottom_song_widget.dart';
 import 'package:spotify/presentation/journeys/nav/custom_tab_bar_widget.dart';
 import 'package:spotify/presentation/journeys/search/search_screen.dart';
 import 'package:spotify/presentation/themes/app_color.dart';
@@ -21,6 +23,7 @@ class _NavScreenState extends State<NavScreen> {
     {"text": "Kitaplığın", "icon": Icons.library_books},
   ];
   int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -30,14 +33,19 @@ class _NavScreenState extends State<NavScreen> {
           children: _screens,
           index: _selectedIndex,
         ),
-        bottomNavigationBar: Container(
-          padding: const EdgeInsets.only(bottom: 6.0),
-          color: AppColor.mineShaft,
-          child: CustomTabBar(
-            icons: _icons,
-            selectedIndex: _selectedIndex,
-            onTap: (index) => setState(() => _selectedIndex = index),
-          ),
+        bottomNavigationBar: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            BottomSong(song: DummySongData.dunyaninSonunaDogmusum),
+            Container(
+              color: AppColor.mineShaft,
+              child: CustomTabBar(
+                icons: _icons,
+                selectedIndex: _selectedIndex,
+                onTap: (index) => setState(() => _selectedIndex = index),
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/common/extensions/size_extensions.dart';
 import 'package:spotify/common/screenutil/screenutil.dart';
+import 'package:spotify/presentation/journeys/search/search_persistent_header.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key key}) : super(key: key);
@@ -10,19 +11,21 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            title: Text("Ara"),
-            centerTitle: true,
+          SliverPersistentHeader(
             pinned: true,
-            floating: false,
+            delegate: SearchPersistentHeader(),
           ),
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                Text("selam"),
+                for (int i = 0; i < 50; i++)
+                  Text(
+                    "",
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
