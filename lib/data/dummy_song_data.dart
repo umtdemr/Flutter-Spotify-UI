@@ -89,7 +89,7 @@ class DummySongData {
   );
 
   static SongModel dunyaninSonunaDogmusum = SongModel(
-    name: "Dünyanın sonuna doğmumşum",
+    name: "Dünyanın sonuna doğmuşum",
     posterUrl:
         "https://i.scdn.co/image/ab67616d00001e02543eb13aa19dd78c4a2cd91f",
     singer: DummySingerData.manga,
@@ -98,7 +98,7 @@ class DummySongData {
     releasedDate: "21 şubat 2008",
   );
   static SongModel poverOverMe = SongModel(
-    name: "Pover Over Me",
+    name: "Power Over Me",
     posterUrl:
         "https://i.scdn.co/image/ab67616d0000b273c9fec49c8930fb10e4756dfe",
     singer: DummySingerData.dermotKennedy,
