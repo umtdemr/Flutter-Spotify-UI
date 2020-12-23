@@ -12,7 +12,7 @@ class MusicBoxBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 74.h,
+      height: 100.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: boxList.length,

@@ -18,14 +18,14 @@ class ListTitleWithPoster extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20.h,
+      height: 25.h,
       margin: EdgeInsets.only(bottom: 10.h),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: 50.0.w,
-            height: 20.0.h,
+            height: 25.0.h,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(30.sp),
               child: CachedNetworkImage(

@@ -13,7 +13,7 @@ class MusicBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 140.h,
+      height: 150.h,
       width: 120.w,
       margin: EdgeInsets.only(right: 15.w),
       child: Column(
